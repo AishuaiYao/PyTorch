@@ -15,7 +15,9 @@
 ### 使用pycharm
 ### 使用终端
 在MobileNet目录下
-> 训练模型：python asl.py --epochs 20  
-> 展示demo: python demo.py
+* 训练模型：
+> python asl.py -v V2
+* demo演示: 
+> python demo.py -v V2
 
 

@@ -35,10 +35,8 @@ parse.add_argument('-b','--batch_size',default=32,type = int,help = 'batch size 
 parse.add_argument('-e','--epochs',default = 20,type = int,help = 'epochs default is 10')
 parse.add_argument('-sm','--model_save_path',default =  './model/*.pkl',type = str,help = 'use "model.model_name" to replace "*"')
 parse.add_argument('-sf','--figure_save_path',default= './figure/loss_curve.png',type = str,help = 'the path of figure')
+parse.add_argument('-v','--version',default='V2',type = str, help= 'Input V1 V2 or V3 please')
 args = parse.parse_args()
-
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 transform = transforms.Compose([transforms.Resize([224,224]),transforms.ToTensor()])
@@ -48,7 +46,10 @@ test_data = datasets.ImageFolder('../data/asl_dataset/valid',transform = transfo
 test_loader = data.DataLoader(test_data,batch_size=args.batch_size,shuffle=True)
 
 
-model = MobileNetV1().to(device)
+version = args.version
+model = MobileNetV1() if version=='V1' else MobileNetV2() if version=='V2' else None
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model.to(device)
 summary(model,(3,224,224))
 optimizer = torch.optim.Adam(model.parameters())
 
@@ -63,7 +64,7 @@ def train(model,device,train_loader,optimizer,epoch):
         loss = F.cross_entropy(out,label)
         loss.backward()
         optimizer.step()
-        if batch_idx%5 == 0:
+        if batch_idx%20 == 0:
             print('epoch: %d/%d \t deal: %d/%d \t loss: %.4f'%(epoch,args.epochs,batch_idx*args.batch_size,
                                                                len(train_loader.dataset),loss.item()))
     return loss.item()
@@ -89,10 +90,8 @@ def test(model,device,test_loader):
     return loss
 
 
-
 train_loss = []
 val_loss = []
-
 for epoch in range(1,args.epochs+1):
     train_loss.append(train(model,device,train_loader,optimizer,epoch))
     val_loss.append(test(model,device,test_loader))

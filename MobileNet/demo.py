@@ -23,13 +23,20 @@ sys.path.append('..')
 from MobileNet.mobileNet import *
 sys.path.append('./MobileNet')
 
+import argparse
 from PIL import Image
 from torchvision import transforms
 from torchsummary import summary
 import matplotlib.pyplot as plt
 
+
+parse = argparse.ArgumentParser('Choose version')
+parse.add_argument('-v','--version',default='V2',type = str, help= 'Input V1 V2 or V3 please')
+args = parse.parse_args()
+
 device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
-model = torch.load('./model/MobileNetV1.pkl')
+model = torch.load('./model/MobileNet%s.pkl'%args.version)
+print('\nThe test will use MobileNet%s'%args.version)
 summary(model,(3,224,224))
 model.to(device)
 model.eval()
