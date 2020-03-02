@@ -16,8 +16,8 @@
 ### 使用终端
 在MobileNet目录下
 * 训练模型：
-> python asl.py -v V2
+> python asl.py -v V2 -e 20
+> python asl.py -v V3 -t large -e 20
 * demo演示: 
 > python demo.py -v V2
-
 
