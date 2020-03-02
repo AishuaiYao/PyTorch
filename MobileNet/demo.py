@@ -30,8 +30,8 @@ from torchsummary import summary
 import matplotlib.pyplot as plt
 
 
-parse = argparse.ArgumentParser('Choose version')
-parse.add_argument('-v','--version',default='V2',type = str, help= 'Input V1 V2 or V3 please')
+parse = argparse.ArgumentParser('Choose mobilenet version')
+parse.add_argument('-v','--version',default='V2',type = str, help= 'input V1, V2 or V3 please')
 args = parse.parse_args()
 
 device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
@@ -59,7 +59,7 @@ for file in files:
 
         plt.ion()#使用终端时打开，使用IDE时注释掉
         plt.figure()
-        plt.text(10, 10, ('No %d/%d' % (i, 600) ), fontdict={'size': 15, 'color': 'green'})
+        plt.text(10, 10, ('No %d/%d' % (i, 600) ), fontdict={'size': 15, 'color': 'white'})
         plt.text(10, 22, ('real  :'+file),fontdict = {'size':15,'color':'red'})
         plt.text(10, 34, ('pred :'+str(classes[pred])),fontdict = {'size':15,'color':'blue'} )
         plt.imshow(row_data)

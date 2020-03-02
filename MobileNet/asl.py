@@ -32,10 +32,12 @@ from torchvision import datasets,transforms
 
 parse = argparse.ArgumentParser('arguments list')
 parse.add_argument('-b','--batch_size',default=32,type = int,help = 'batch size default is 16')
-parse.add_argument('-e','--epochs',default = 20,type = int,help = 'epochs default is 10')
-parse.add_argument('-sm','--model_save_path',default =  './model/*.pkl',type = str,help = 'use "model.model_name" to replace "*"')
+parse.add_argument('-e','--epochs',default = 10,type = int,help = 'epochs default is 10')
+parse.add_argument('-sm','--model_save_path',default =  './model/*.pkl',type = str,
+                   help = 'an example: "./model/*.pkl",the program will replace "*" with "model.model_name"')
 parse.add_argument('-sf','--figure_save_path',default= './figure/loss_curve.png',type = str,help = 'the path of figure')
-parse.add_argument('-v','--version',default='V2',type = str, help= 'Input V1 V2 or V3 please')
+parse.add_argument('-v','--version',default='V3',type = str, help= 'switch net version,input V1 V2 or V3 please')
+parse.add_argument('-t','--v3net_mode',default='large',type = str,help ='the v3net mode,input large or small please')
 args = parse.parse_args()
 
 
@@ -47,7 +49,7 @@ test_loader = data.DataLoader(test_data,batch_size=args.batch_size,shuffle=True)
 
 
 version = args.version
-model = MobileNetV1() if version=='V1' else MobileNetV2() if version=='V2' else None
+model = MobileNetV1() if version=='V1' else MobileNetV2() if version=='V2' else MobileNetV3(args.v3net_mode)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 summary(model,(3,224,224))
@@ -82,10 +84,10 @@ def test(model,device,test_loader):
             accuracy += pred.eq(label.view_as(pred)).sum().item()
     total = len(test_loader.dataset)
     loss /= total
-    accuracy = 100*(accuracy / total)
+    accuracy /= total
     if accuracy>0.97:
         torch.save(model,args.model_save_path.replace('*',model.model_name))
-    print('valid loss: %.4f \t accuracy: %.2f \n'%(loss,accuracy))
+    print('valid loss: %.4f \t accuracy: %.2f%% \n'%(loss,100*accuracy))
 
     return loss
 
