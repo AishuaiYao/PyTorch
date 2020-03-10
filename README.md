@@ -19,7 +19,7 @@
 > python asl.py -v V2 -e 20  
 > python asl.py -v V3 -t large -e 20
 * demo演示: 
-> python demo.py -v V2
+> python demo.py -v V2  
 在YOLOV3目录下   
 * 获取yolov3的权重文件   
 > wget https://github.com/ayooshkathuria/pytorch-yolo-v3/raw/master/dog-cycle-car.png
