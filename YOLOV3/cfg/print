@@ -1,0 +1,427 @@
+({'width': '608', 'angle': '0', 'type': 'net', 'burn_in': '1000', 'momentum': '0.9', 'learning_rate': '0.001', 'subdivisions': '16', 'height': '608', 'hue': '.1', 'scales': '.1,.1', 'batch': '64', 'decay': '0.0005', 'saturation': '1.5', 'policy': 'steps', 'exposure': '1.5', 'max_batches': '500200', 'channels': '3', 'steps': '400000,450000'}, ModuleList(
+  (0): Sequential(
+    (convolution_0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_0): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (1): Sequential(
+    (convolution_1): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_normalize_1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_1): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (2): Sequential(
+    (convolution_2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_2): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (3): Sequential(
+    (convolution_3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_3): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (4): Sequential()
+  (5): Sequential(
+    (convolution_5): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_normalize_5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_5): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (6): Sequential(
+    (convolution_6): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_6): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_6): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (7): Sequential(
+    (convolution_7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_7): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (8): Sequential()
+  (9): Sequential(
+    (convolution_9): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_9): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (10): Sequential(
+    (convolution_10): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_10): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_10): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (11): Sequential()
+  (12): Sequential(
+    (convolution_12): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_normalize_12): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_12): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (13): Sequential(
+    (convolution_13): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_13): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_13): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (14): Sequential(
+    (convolution_14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_14): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_14): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (15): Sequential()
+  (16): Sequential(
+    (convolution_16): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_16): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_16): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (17): Sequential(
+    (convolution_17): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_17): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_17): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (18): Sequential()
+  (19): Sequential(
+    (convolution_19): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_19): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_19): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (20): Sequential(
+    (convolution_20): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_20): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_20): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (21): Sequential()
+  (22): Sequential(
+    (convolution_22): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_22): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_22): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (23): Sequential(
+    (convolution_23): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_23): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_23): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (24): Sequential()
+  (25): Sequential(
+    (convolution_25): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_25): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_25): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (26): Sequential(
+    (convolution_26): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_26): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_26): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (27): Sequential()
+  (28): Sequential(
+    (convolution_28): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_28): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_28): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (29): Sequential(
+    (convolution_29): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_29): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_29): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (30): Sequential()
+  (31): Sequential(
+    (convolution_31): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_31): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_31): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (32): Sequential(
+    (convolution_32): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_32): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_32): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (33): Sequential()
+  (34): Sequential(
+    (convolution_34): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_34): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_34): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (35): Sequential(
+    (convolution_35): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_35): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_35): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (36): Sequential()
+  (37): Sequential(
+    (convolution_37): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_normalize_37): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_37): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (38): Sequential(
+    (convolution_38): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_38): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_38): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (39): Sequential(
+    (convolution_39): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_39): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_39): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (40): Sequential()
+  (41): Sequential(
+    (convolution_41): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_41): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_41): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (42): Sequential(
+    (convolution_42): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_42): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_42): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (43): Sequential()
+  (44): Sequential(
+    (convolution_44): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_44): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_44): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (45): Sequential(
+    (convolution_45): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_45): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_45): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (46): Sequential()
+  (47): Sequential(
+    (convolution_47): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_47): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_47): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (48): Sequential(
+    (convolution_48): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_48): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_48): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (49): Sequential()
+  (50): Sequential(
+    (convolution_50): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_50): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_50): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (51): Sequential(
+    (convolution_51): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_51): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_51): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (52): Sequential()
+  (53): Sequential(
+    (convolution_53): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_53): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_53): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (54): Sequential(
+    (convolution_54): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_54): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_54): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (55): Sequential()
+  (56): Sequential(
+    (convolution_56): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_56): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_56): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (57): Sequential(
+    (convolution_57): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_57): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_57): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (58): Sequential()
+  (59): Sequential(
+    (convolution_59): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_59): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_59): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (60): Sequential(
+    (convolution_60): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_60): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_60): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (61): Sequential()
+  (62): Sequential(
+    (convolution_62): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_normalize_62): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_62): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (63): Sequential(
+    (convolution_63): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_63): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_63): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (64): Sequential(
+    (convolution_64): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_64): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_64): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (65): Sequential()
+  (66): Sequential(
+    (convolution_66): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_66): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_66): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (67): Sequential(
+    (convolution_67): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_67): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_67): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (68): Sequential()
+  (69): Sequential(
+    (convolution_69): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_69): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_69): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (70): Sequential(
+    (convolution_70): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_70): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_70): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (71): Sequential()
+  (72): Sequential(
+    (convolution_72): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_72): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_72): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (73): Sequential(
+    (convolution_73): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_73): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_73): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (74): Sequential()
+  (75): Sequential(
+    (convolution_75): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_75): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_75): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (76): Sequential(
+    (convolution_76): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_76): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_76): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (77): Sequential(
+    (convolution_77): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_77): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_77): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (78): Sequential(
+    (convolution_78): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_78): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_78): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (79): Sequential(
+    (convolution_79): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_79): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_79): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (80): Sequential(
+    (convolution_80): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_80): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_80): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (81): Sequential(
+    (convolution_81): Conv2d(1024, 255, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_81): BatchNorm2d(255, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_81): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (82): Sequential(
+    (Detection_82): DetectionLayer()
+  )
+  (83): Sequential(
+    (route_83): EmptyLayer()
+  )
+  (84): Sequential(
+    (convolution_84): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_84): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_84): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (85): Sequential(
+    (upsample_85): Upsample(scale_factor=2, mode=bilinear)
+  )
+  (86): Sequential(
+    (route_86): EmptyLayer()
+  )
+  (87): Sequential(
+    (convolution_87): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_87): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_87): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (88): Sequential(
+    (convolution_88): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_88): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_88): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (89): Sequential(
+    (convolution_89): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_89): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_89): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (90): Sequential(
+    (convolution_90): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_90): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_90): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (91): Sequential(
+    (convolution_91): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_91): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_91): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (92): Sequential(
+    (convolution_92): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_92): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_92): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (93): Sequential(
+    (convolution_93): Conv2d(512, 255, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_93): BatchNorm2d(255, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_93): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (94): Sequential(
+    (Detection_94): DetectionLayer()
+  )
+  (95): Sequential(
+    (route_95): EmptyLayer()
+  )
+  (96): Sequential(
+    (convolution_96): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_96): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_96): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (97): Sequential(
+    (upsample_97): Upsample(scale_factor=2, mode=bilinear)
+  )
+  (98): Sequential(
+    (route_98): EmptyLayer()
+  )
+  (99): Sequential(
+    (convolution_99): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_99): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_99): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (100): Sequential(
+    (convolution_100): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_100): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_100): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (101): Sequential(
+    (convolution_101): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_101): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_101): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (102): Sequential(
+    (convolution_102): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_102): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_102): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (103): Sequential(
+    (convolution_103): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_103): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_103): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (104): Sequential(
+    (convolution_104): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_104): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_104): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (105): Sequential(
+    (convolution_105): Conv2d(256, 255, kernel_size=(1, 1), stride=(1, 1), padding=(1, 1), bias=False)
+    (batch_normalize_105): BatchNorm2d(255, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation_105): LeakyReLU(negative_slope=0.1, inplace)
+  )
+  (106): Sequential(
+    (Detection_106): DetectionLayer()
+  )
+))
