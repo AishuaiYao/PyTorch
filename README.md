@@ -8,6 +8,7 @@
 ## 搭建网络
 * ResNet
 * MobileNet
+* YOLOV3
 ## 数据集
 * mnist
 * asl，A-E共五类，共15000个数据，12000的训练集、3000的验证集
