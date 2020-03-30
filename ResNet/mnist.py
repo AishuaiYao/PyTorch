@@ -4,15 +4,15 @@ import torch.optim as optim
 from torch.utils import data
 from torchvision import datasets,transforms
 from torchsummary import summary
-import myNet
+from ResNet import myNet
 
 batch_size = 128
 epochs = 20
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-train_data = datasets.MNIST('./data', train=True, download=True,transform=transforms.Compose(
+train_data = datasets.MNIST('../data', train=True, download=True,transform=transforms.Compose(
                             [transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))]))
-test_data =  datasets.MNIST('./data', train=False, transform=transforms.Compose(
+test_data =  datasets.MNIST('../data', train=False, transform=transforms.Compose(
                             [transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))]))
 
 
