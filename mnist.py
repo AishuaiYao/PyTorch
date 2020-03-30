@@ -20,7 +20,7 @@ train_loader = torch.utils.data.DataLoader(train_data,batch_size=batch_size, shu
 test_loader = torch.utils.data.DataLoader(test_data,batch_size=batch_size, shuffle=True)
 
 
-model = myNet.CNN().to(device)
+model = myNet.ConvNet().to(device)
 summary(model,(1,28,28))
 optimizer = optim.Adam(model.parameters())
 
