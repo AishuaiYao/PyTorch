@@ -1,3 +1,19 @@
+'''
+@Author  :   {AishuaiYao}
+
+@License :   (C) Copyright 2013-2017, {None}
+
+@Contact :   {aishuaiyao@163.com}
+
+@Software:   ${mnistRecognition}
+
+@File    :   ${resnet}.py
+
+@Time    :   ${2020-02-22}
+
+@Desc    :   practice
+
+'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

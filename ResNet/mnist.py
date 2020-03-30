@@ -1,10 +1,26 @@
+'''
+@Author  :   {AishuaiYao}
+
+@License :   (C) Copyright 2013-2020, {None}
+
+@Contact :   {aishuaiyao@163.com}
+
+@Software:   ${mnistRecognition}
+
+@File    :   ${mnist}.py
+
+@Time    :   ${2020-02-22}
+
+@Desc    :   practice
+
+'''
 import torch
 import torch.nn.functional as  F
 import torch.optim as optim
 from torch.utils import data
 from torchvision import datasets,transforms
 from torchsummary import summary
-from ResNet import myNet
+from ResNet import resnet
 
 batch_size = 128
 epochs = 20
@@ -20,7 +36,7 @@ train_loader = torch.utils.data.DataLoader(train_data,batch_size=batch_size, shu
 test_loader = torch.utils.data.DataLoader(test_data,batch_size=batch_size, shuffle=True)
 
 
-model = myNet.ConvNet().to(device)
+model = resnet.ResNet().to(device)
 summary(model,(1,28,28))
 optimizer = optim.Adam(model.parameters())
 
