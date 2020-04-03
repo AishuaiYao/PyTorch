@@ -22,9 +22,10 @@ from torchsummary import summary
 from torch.utils import data
 from torchvision import transforms,datasets
 from FreePractice import myNet
-
+from tools import *
 
 batch_size = 16
+classes = ['A','B','C','D','E']
 epochs = 10
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -81,11 +82,13 @@ def test(model, device, valid_loader):
 
         return loss
 
+
 train_loss = []
 val_loss = []
-for epoch in range(1, epochs + 1):
+for epoch in range(1):
     train_loss.append(train(model, device, train_loader, optimizer, epoch))
     val_loss.append(test(model, device, valid_loader))
+
 
 
 

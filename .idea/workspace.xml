@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48a78ced-400e-4197-ae63-79c4741960b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FreePractice/free.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FreePractice/myNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreePractice/free.py" beforeDir="false" afterPath="$PROJECT_DIR$/FreePractice/free.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResNet/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResNet/mnist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResNet/myNet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PyTorch$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1585554130143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
+    <SUITE FILE_PATH="coverage/PyTorch$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1585894534393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
     <SUITE FILE_PATH="coverage/Pytorch$temp__3_.coverage" NAME="temp  Coverage Results" MODIFIED="1581771171209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unet" />
     <SUITE FILE_PATH="coverage/Pytorch$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1582790676112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pytorch$temp.coverage" NAME="temp Coverage Results" MODIFIED="1582883563703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -24,7 +22,7 @@
     <SUITE FILE_PATH="coverage/PyTorch$mnist__1_.coverage" NAME="mnist (1) Coverage Results" MODIFIED="1585553703530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
     <SUITE FILE_PATH="coverage/Pytorch$temp__1_.coverage" NAME="temp (1) Coverage Results" MODIFIED="1581517843856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/测试集" />
     <SUITE FILE_PATH="coverage/Pytorch$main.coverage" NAME="main Coverage Results" MODIFIED="1581818641979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unet" />
-    <SUITE FILE_PATH="coverage/PyTorch$free.coverage" NAME="free Coverage Results" MODIFIED="1585560138601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FreePractice" />
+    <SUITE FILE_PATH="coverage/PyTorch$free.coverage" NAME="free Coverage Results" MODIFIED="1585891803496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FreePractice" />
     <SUITE FILE_PATH="coverage/Pytorch$demo.coverage" NAME="demo Coverage Results" MODIFIED="1582866545851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MobileNet" />
     <SUITE FILE_PATH="coverage/Pytorch$cifar100.coverage" NAME="cifar100 Coverage Results" MODIFIED="1582768918946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MobileNet" />
   </component>
@@ -53,14 +51,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FreePractice/free.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="1290">
+              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
               <folding>
                 <element signature="e#225#237#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ResNet/mnist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+              <folding>
+                <element signature="e#227#239#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MobileNet/asl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-585">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -78,6 +109,7 @@
     <findStrings>
       <find>self.dataset</find>
       <find>softmax</find>
+      <find>classes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,30 +133,29 @@
         <option value="$PROJECT_DIR$/MobileNet/cifar100.py" />
         <option value="$PROJECT_DIR$/mnist.py" />
         <option value="$PROJECT_DIR$/MobileNet/__init__.py" />
-        <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/MobileNet/mobileNet.py" />
         <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/MobileNet/demo.py" />
         <option value="$PROJECT_DIR$/MobileNet/asl.py" />
-        <option value="$PROJECT_DIR$/ResNet/mnist.py" />
         <option value="$PROJECT_DIR$/ResNet/resnet.py" />
         <option value="$PROJECT_DIR$/FreePractice/myNet.py" />
         <option value="$PROJECT_DIR$/FreePractice/free.py" />
+        <option value="$PROJECT_DIR$/ResNet/mnist.py" />
+        <option value="$PROJECT_DIR$/tools.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="928" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,27 +171,19 @@
             <path>
               <item name="PyTorch" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyTorch" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="asl_dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="ResNet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyTorch" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyTorch" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="asl_dataset" type="462c0819:PsiDirectoryNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyTorch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyTorch" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="asl_dataset" type="462c0819:PsiDirectoryNode" />
-              <item name="valid" type="462c0819:PsiDirectoryNode" />
+              <item name="ResNet" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.free">
+  <component name="RunManager" selected="Python.mnist">
     <configuration name="asl" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -306,8 +329,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.free" />
         <item itemvalue="Python.mnist" />
+        <item itemvalue="Python.free" />
         <item itemvalue="Python.asl" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.demo" />
@@ -343,11 +366,12 @@
       <workItem from="1582938888074" duration="4048000" />
       <workItem from="1585553345756" duration="4000" />
       <workItem from="1585553381114" duration="7934000" />
+      <workItem from="1585813262692" duration="16892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129306000" />
+    <option name="totallyTimeSpent" value="146198000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,16 +383,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="928" height="1056" extended-state="4" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3693182" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21195352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49886364" visible="true" weight="0.3922414" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.50431037" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49886364" visible="true" weight="0.38075313" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5041841" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
@@ -381,7 +404,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.6087438" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.41449916" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -418,6 +441,11 @@
           <url>file://$PROJECT_DIR$/MobileNet/demo.py</url>
           <line>60</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FreePractice/free.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -505,16 +533,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MobileNet/cifar100.py" />
-    <entry file="file://$PROJECT_DIR$/myNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myNet.py" />
     <entry file="file:///usr/lib/python3.5/argparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -543,16 +562,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist.py" />
     <entry file="file:///usr/lib/python3.5/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -565,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="3810" column="4" selection-start-line="3810" selection-start-column="4" selection-end-line="3810" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -600,33 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MobileNet/asl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResNet/myNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResNet/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ResNet/myNet.py" />
     <entry file="file://$PROJECT_DIR$/ResNet/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -646,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.5/dist-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="1351" selection-start-line="1351" selection-end-line="1351" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FreePractice/myNet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -660,12 +630,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="1924" column="4" selection-start-line="1924" selection-start-column="4" selection-end-line="1924" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MobileNet/asl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-585">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FreePractice/free.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="1290">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
           <folding>
             <element signature="e#225#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResNet/mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding>
+            <element signature="e#227#239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
