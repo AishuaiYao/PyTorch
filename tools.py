@@ -20,7 +20,7 @@ def confusion_matrix(pred, label, cm):
     return cm
 
 
-def plot_confusion_matrix(cm, classes,title = 'Confusion Matrix'):
+def plot_confusion_matrix(cm, classes,title = 'ConfusionMatrix'):
     plt.imshow(cm,interpolation='nearest',cmap = plt.cm.Blues)#设置显示格式
     plt.title(title)
     plt.colorbar()
@@ -44,3 +44,6 @@ def plot_confusion_matrix(cm, classes,title = 'Confusion Matrix'):
     plt.xlabel('Predict')
     plt.savefig('./%s.png'%title)
     plt.show()
+
+
+
