@@ -16,11 +16,13 @@
 '''
 
 import os
-import time
-from PIL import Image
+import torch.nn as nn
+import torch.nn.functional as F
 import torch
+from torchsummary import summary
 from torchvision import transforms,datasets
 from torch.utils.data import Dataset,DataLoader
+from FCN.fcn import FCN
 import numpy as np
 import cv2
 
@@ -62,11 +64,11 @@ def preproccessing(datas,labels):
 
 
 
-def img2label(img,label):
+def img2label(img,label,padding_size = 512):
     img = cv2.imread(img)
     label = cv2.imread(label)
 
-    max_width, max_height = 500, 500
+    max_width, max_height = padding_size,padding_size
     height, width, channel = img.shape
     pad_width = (max_width - width) // 2
     pad_height = (max_height - height) // 2
@@ -112,48 +114,82 @@ class VOCSegGenerator(Dataset):
 train = VOCSegGenerator(train = True)
 valid = VOCSegGenerator(train = False)
 
-train_loader = DataLoader(dataset = train,batch_size=16,shuffle=True)
-vaild_loader = DataLoader(dataset = valid,batch_size=16)
+Batch_size = 2
+train_loader = DataLoader(dataset = train,batch_size=Batch_size,shuffle=True)
+vaild_loader = DataLoader(dataset = valid,batch_size=Batch_size)
 
 
-def _fast_hist(label_true, label_pred, n_class):
-    mask = (label_true >= 0) & (label_true < n_class)
-    hist = np.bincount(
-        n_class * label_true[mask].astype(int) +
-        label_pred[mask], minlength=n_class ** 2).reshape(n_class, n_class)
-    return hist
-
-
-def label_accuracy_score(label_trues, label_preds, n_class):
-    """Returns accuracy score evaluation result.
-      - overall accuracy
-      - mean accuracy
-      - mean IU
-      - fwavacc
-    """
-    hist = np.zeros((n_class, n_class))
-    for lt, lp in zip(label_trues, label_preds):
-        hist += _fast_hist(lt.flatten(), lp.flatten(), n_class)
-    acc = np.diag(hist).sum() / hist.sum()
-    acc_cls = np.diag(hist) / hist.sum(axis=1)
-    acc_cls = np.nanmean(acc_cls)
-    iu = np.diag(hist) / (hist.sum(axis=1) + hist.sum(axis=0) - np.diag(hist))
-    mean_iu = np.nanmean(iu)
-    freq = hist.sum(axis=1) / hist.sum()
-    fwavacc = (freq[freq > 0] * iu[freq > 0]).sum()
-    return acc, acc_cls, mean_iu, fwavacc
-
-
-import torch.nn as nn
-
-# from mxtorch.trainer import ScheduledOptim
-
-from FCN import fcn
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = fcn.FCN(num_classes=21)
+
+model = FCN(num_classes=21)
 model.to(device)
 
-criterion = nn.NLLLoss2d()
-basic_optim = torch.optim.SGD(model.parameters(), lr=1e-2, weight_decay=1e-4)
-# optimizer = ScheduledOptim(basic_optim)
+summary(model,(3,512,512))
+
+optimizer = torch.optim.Adam(model.parameters())
+
+
+def train(model,device,train_loader,optimizer,epoch):
+    model.train()
+    for batch_idx,(data,label) in enumerate(train_loader):
+        data,label = data.to(device),label.to(device)
+        optimizer.zero_grad()
+        output = model(data)
+        output = F.log_softmax(output,dim=1)
+        criterion = nn.NLLLoss()
+        loss = criterion(output,label)
+        loss.backward()
+        optimizer.step()
+        if (batch_idx) % 30 == 0:
+            print('train {} epoch : {}/{} \t loss : {:.6f}'.format(
+                epoch, batch_idx * len(data), len(train_loader.dataset), loss.item()))
+
+
+for epoch in range(1):
+    train(model,device,train_loader,optimizer,epoch)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
