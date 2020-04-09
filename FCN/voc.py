@@ -66,6 +66,8 @@ def preproccessing(datas,labels):
 
 def img2label(img,label,padding_size = 512):
     img = cv2.imread(img)
+    # cv2.imshow('im',img)
+    # cv2.waitKey(2000)
     label = cv2.imread(label)
 
     max_width, max_height = padding_size,padding_size
@@ -114,21 +116,36 @@ class VOCSegGenerator(Dataset):
 train = VOCSegGenerator(train = True)
 valid = VOCSegGenerator(train = False)
 
-Batch_size = 2
+Batch_size = 1
 train_loader = DataLoader(dataset = train,batch_size=Batch_size,shuffle=True)
 vaild_loader = DataLoader(dataset = valid,batch_size=Batch_size)
 
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-model = FCN(num_classes=21)
+num_classes = 21
+model = FCN(num_classes)
 model.to(device)
 
 summary(model,(3,512,512))
 
 optimizer = torch.optim.Adam(model.parameters())
 
+
+
+def _fast_hist(label,pred,num_classes):
+    mask = (label >= 0) &(label < num_classes)
+
+    hist = np.bincount(num_classes * label[mask].astype(int) + pred[mask],minlength=num_classes**2).reshape(num_classes,num_classes)
+    return hist
+
+def label_accuracy_score(label,pred,num_classes):
+    hist = np.zeros((num_classes,num_classes))
+    for l,p in zip(label,pred):
+        hist += _fast_hist(l.flatten(),p.flatten(),num_classes)
+        # print(1)
+
+    return 1,2,3,4
 
 def train(model,device,train_loader,optimizer,epoch):
     model.train()
@@ -144,10 +161,23 @@ def train(model,device,train_loader,optimizer,epoch):
         if (batch_idx) % 30 == 0:
             print('train {} epoch : {}/{} \t loss : {:.6f}'.format(
                 epoch, batch_idx * len(data), len(train_loader.dataset), loss.item()))
+        pred = output.max(dim=1)[1].squeeze().data.cpu().numpy()
+        # label = label.data.cpu().numpy()
+        #
+        # for t,p in zip(label,pred):
+        #     acc,acc_cls,mean_iu,fwavac = label_accuracy_score(t,p,num_classes)
+
+
+        cm = np.array(colormap).astype('uint8')
+        pred = cm[pred]
+        cv2.imwrite('./result/%d.png'%batch_idx,pred)
+
 
 
 for epoch in range(1):
     train(model,device,train_loader,optimizer,epoch)
+
+    print('1')
 
 
 
