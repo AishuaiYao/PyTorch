@@ -85,14 +85,14 @@ def test(model,device,test_loader):
 
 
 if __name__ == '__main__':
-    # for epoch in range(epochs):
-    #     train(model,device,train_loader,optimizer,epoch)
-    #     test(model,device,test_loader)
+    for epoch in range(epochs):
+        train(model,device,train_loader,optimizer,epoch)
+        test(model,device,test_loader)
 
-    model = torch.load('./model/resnet.pkl')
-    conf_matrix = test(model,device,test_loader)
-
-    plot_confusion_matrix(conf_matrix, classes)
+    # model = torch.load('./model/resnet.pkl')
+    # conf_matrix = test(model,device,test_loader)
+    #
+    # plot_confusion_matrix(conf_matrix, classes)
 
 
 
