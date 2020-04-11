@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48a78ced-400e-4197-ae63-79c4741960b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FCN/fcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/FCN/fcn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FCN/voc.py" beforeDir="false" afterPath="$PROJECT_DIR$/FCN/voc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResNet/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResNet/mnist.py" afterDir="false" />
-    </list>
+    <list default="true" id="48a78ced-400e-4197-ae63-79c4741960b4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FCN/fcn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="e#231#243#0" expanded="true" />
               </folding>
@@ -380,12 +375,12 @@
       <workItem from="1586155349419" duration="18717000" />
       <workItem from="1586231666394" duration="10000" />
       <workItem from="1586247069236" duration="15836000" />
-      <workItem from="1586442004477" duration="6468000" />
+      <workItem from="1586442004477" duration="6732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215086000" />
+    <option name="totallyTimeSpent" value="215350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -788,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FCN/fcn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="e#231#243#0" expanded="true" />
           </folding>
