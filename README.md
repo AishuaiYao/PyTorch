@@ -31,4 +31,12 @@
 * 示例  
 ![image](https://github.com/AishuaiYao/PyTorch/blob/master/YOLOV3/detect/person.jpg)
 
+在FCN目录下   
+* 实验了vgg和resnet两种不同backbone的fcn结构，其余所有策略包括数据的形式和优化策略都相同，实验结果中resnet50基础的网络最接近论文效果  
+* 从左到右依次是：原图 标签 FCNx8_ResNet50 FCNx8_VGG  
+* 示例  
+![image](https://github.com/AishuaiYao/PyTorch/blob/master/FCN/test/39759931.jpg)  
+* 结论是：网络的效果因结构的不同有很大差异，网络结构很重要。在实验中两种网络的最小损失都只能降低到小数点后两位0.0xx停滞。
+
+
 
