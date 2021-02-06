@@ -44,6 +44,7 @@ model = resnet.ResNet().to(device)
 summary(model,(1,28,28))
 optimizer = optim.Adam(model.parameters())
 
+
 def train(model,device,train_loader,optimizer,epoch):
     model.train()
     for batch_idx,(data,label) in enumerate(train_loader):
@@ -57,6 +58,7 @@ def train(model,device,train_loader,optimizer,epoch):
             print('train {} epoch : {}/{} \t loss : {:.6f}'.format(
                                                     epoch,batch_idx*len(data),len(train_loader.dataset),loss.item()))
     torch.save(model, './model/resnet.pkl')
+
 
 def test(model,device,test_loader):
     model.eval()

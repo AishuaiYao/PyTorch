@@ -1,25 +1,16 @@
-import numpy as np
+from torch.autograd import Variable, Function
+from torch import nn
 import torch
-import  cv2
 
+N = 10
+x = torch.zeros( size=(3,224,224))
+offset = torch.zeros(size=(3,224,224))
 
+offsets_index = Variable(torch.cat([torch.arange(0, 2 * N, 2), torch.arange(1, 2 * N + 1, 2)]),
+                         requires_grad=False).type_as(x).long()
+offsets_index = offsets_index.unsqueeze(dim=0).unsqueeze(dim=-1).unsqueeze(dim=-1).expand(*offset.size())
+offset = torch.gather(offset, dim=1, index=offsets_index)
 
-# # hist = np.bincount(
-# #     n_class * label_true[mask].astype(int) + label_pred[mask], minlength=n_class ** 2).reshape(n_class, n_class)
-#
-n1 = np.array([1,2,3,4,5,6,7,8,9]).reshape(3,3)
-
-print(n1)
-
-colormap = [[0,0,0],        [128,0,0],      [0,128,0],      [128,128,0],    [0,0,128],
-            [128,0,128],    [0,128,128],    [128,128,128],  [64,0,0],       [192,0,0],
-            [64,128,0],     [192,128,0],    [64,0,128],     [192,0,128],    [64,128,128],
-            [192,128,128],  [0,64,0],       [128,64,0],     [0,192,0],      [128,192,0],
-            [0,64,128]]
-cm = np.array(colormap)
-
-n2 = cm[n1]
-print(n2)
 
 
 
