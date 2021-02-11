@@ -1,3 +1,21 @@
+'''
+@Author  :   {Aishuai Yao}
+
+@License :   (C) Copyright 2021
+
+@Contact :   {aishuaiyao@163.com}
+
+@Software:   ${dcn architecture}
+
+@File    :   ${dcn}.py
+
+@Time    :   ${2021-02-11}
+
+@Desc    :   dcn net
+
+'''
+
+
 import os
 import torch
 from torch import nn

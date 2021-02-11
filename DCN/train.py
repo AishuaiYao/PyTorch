@@ -1,3 +1,21 @@
+'''
+@Author  :   {https://blog.csdn.net/qq_37200357/article/details/97390803}
+
+@License :   (C) Copyright 2021
+
+@Contact :   {aishuaiyao@163.com}
+
+@Software:   ${dcn demo}
+
+@File    :   ${train}.py
+
+@Time    :   ${2021-02-11}
+
+@Desc    :   dcn net
+
+'''
+
+
 from __future__ import print_function
 import argparse
 import torch

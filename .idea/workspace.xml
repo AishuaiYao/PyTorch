@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48a78ced-400e-4197-ae63-79c4741960b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCN/dcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCN/dcn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCN/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCN/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MobileNet/asl.py" beforeDir="false" afterPath="$PROJECT_DIR$/MobileNet/asl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCN/dcn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -64,10 +63,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DCN/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-690">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MobileNet/asl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="17" />
+              <folding>
+                <element signature="e#233#245#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,7 +127,6 @@
         <option value="$PROJECT_DIR$/MobileNet/__init__.py" />
         <option value="$PROJECT_DIR$/MobileNet/mobileNet.py" />
         <option value="$PROJECT_DIR$/MobileNet/demo.py" />
-        <option value="$PROJECT_DIR$/MobileNet/asl.py" />
         <option value="$PROJECT_DIR$/ResNet/resnet.py" />
         <option value="$PROJECT_DIR$/FreePractice/myNet.py" />
         <option value="$PROJECT_DIR$/FreePractice/free.py" />
@@ -127,8 +137,9 @@
         <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/DCN/dcn2.py" />
         <option value="$PROJECT_DIR$/DCN/train2.py" />
-        <option value="$PROJECT_DIR$/DCN/dcn.py" />
+        <option value="$PROJECT_DIR$/MobileNet/asl.py" />
         <option value="$PROJECT_DIR$/DCN/train.py" />
+        <option value="$PROJECT_DIR$/DCN/dcn.py" />
       </list>
     </option>
   </component>
@@ -366,12 +377,12 @@
       <workItem from="1586247069236" duration="15836000" />
       <workItem from="1586442004477" duration="6732000" />
       <workItem from="1588404421445" duration="14000" />
-      <workItem from="1612538429624" duration="40457000" />
+      <workItem from="1612538429624" duration="41069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255821000" />
+    <option name="totallyTimeSpent" value="256433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,7 +397,7 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18594356" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18594356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.3294979" />
@@ -406,7 +417,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" x="65" y="24" width="1855" height="1056" id="SciView" order="3" weight="0.31211954" />
       <window_info anchor="right" id="Database" order="4" weight="0.32982844" />
-      <window_info active="true" anchor="right" id="Run" order="5" sideWeight="0.49886364" visible="true" weight="0.3752075" />
+      <window_info anchor="right" id="Run" order="5" sideWeight="0.49886364" visible="true" weight="0.3752075" />
       <window_info anchor="right" id="Debug" order="6" weight="0.4189264" />
     </layout>
     <layout-to-restore>
@@ -497,7 +508,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DCN/dcn.py</url>
-          <line>113</line>
+          <line>131</line>
           <option name="timeStamp" value="159" />
         </line-breakpoint>
       </breakpoints>
@@ -799,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MobileNet/asl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state>
+          <caret selection-end-line="17" />
           <folding>
             <element signature="e#233#245#0" expanded="true" />
           </folding>
@@ -809,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DCN/dcn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -819,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DCN/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
