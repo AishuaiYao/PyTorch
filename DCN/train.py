@@ -6,7 +6,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.autograd import Variable
-from dcn import DeformConv2D
+from dcn import DeformConv2d
 
 from time import time
 
@@ -28,6 +28,7 @@ parser.add_argument('--seed', type=int, default=1, metavar='S',
                     help='random seed (default: 1)')
 parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                     help='how many batches to wait before logging training status')
+parser.add_argument('--save_model', type=str, default="./model/dcn.pth", help="save to some place")
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 '''
@@ -84,7 +85,7 @@ class DeformNet(nn.Module):
         self.bn3 = nn.BatchNorm2d(128)
 
         self.offsets = nn.Conv2d(128, 18, kernel_size=3, padding=1)
-        self.conv4 = DeformConv2D(128, 128, kernel_size=3, padding=1)
+        self.conv4 = DeformConv2d(128, 128, kernel_size=3, padding=1)
         self.bn4 = nn.BatchNorm2d(128)
 
         self.classifier = nn.Linear(128, 10)
@@ -107,41 +108,9 @@ class DeformNet(nn.Module):
 
         return F.log_softmax(x, dim=1)
 
-#
-# class PlainNet(nn.Module):
-#     def __init__(self):
-#         super(PlainNet, self).__init__()
-#         self.conv1 = nn.Conv2d(1, 32, kernel_size=3, padding=1)
-#         self.bn1 = nn.BatchNorm2d(32)
-#
-#         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
-#         self.bn2 = nn.BatchNorm2d(64)
-#
-#         self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
-#         self.bn3 = nn.BatchNorm2d(128)
-#
-#         self.conv4 = nn.Conv2d(128, 128, kernel_size=3, padding=1)
-#         self.bn4 = nn.BatchNorm2d(128)
-#
-#         self.classifier = nn.Linear(128, 10)
-#
-#     def forward(self, x):
-#         # convs
-#         x = F.relu(self.conv1(x))
-#         x = self.bn1(x)
-#         x = F.relu(self.conv2(x))
-#         x = self.bn2(x)
-#         x = F.relu(self.conv3(x))
-#         x = self.bn3(x)
-#         x = F.relu(self.conv4(x))
-#         x = self.bn4(x)
-#
-#         x = F.avg_pool2d(x, kernel_size=28, stride=1).view(x.size(0), -1)
-#         x = self.classifier(x)
-#
-#         return F.log_softmax(x, dim=1)
-#
+
 model = DeformNet()
+
 '''
 将所有的模型参数移动到GPU上
 if args.cuda:
@@ -214,5 +183,5 @@ for epoch in range(1, args.epochs + 1):
     train(epoch)
     iter = time() - since
     print("Spends {}s for each training epoch".format(iter/args.epochs))
-    test()
+    torch.save(model, args.save_model)
 
